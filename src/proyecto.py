@@ -6,7 +6,7 @@ def agregar_producto ():
     # #pedir nombre(no necesita validacion)
     nombre = input("Ingrese el nombre del producto: ")
     
-    #pedir precio (necesita validacion)
+    #pedir precio (si necesita validacion)
     while True:
         try:
             precio = float(input("Ingrese el precio de su producto: "))
