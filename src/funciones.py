@@ -1,10 +1,3 @@
-#importamos csv
-import csv
-
-# lista inventario vacia
-inventario = []
-
-
 # funcion para agregar productos
 def agregar_producto():
     # #pedir nombre(no necesita validacion)
@@ -79,33 +72,3 @@ def guardar_csv():
                     [producto["nombre"], producto["precio"], producto["cantidad"]]
                 )
             print("Inventario guardado correctamente!")
-
-
-# while que se ejecuta hasta que el user elija salir
-while True:
-    print("====MENU INVENTARIO====\n")
-    print("1. Agregar producto")
-    print("2. Mostrar inventario")
-    print("3. Calcular estadisticas")
-    print("4. Guardar CSV")
-    print("5. Salir")
-
-    opcion = input("Elige una opcion:\n")
-
-    if opcion == "1":
-        agregar_producto()
-    elif opcion == "2":
-        mostrar_productos()
-
-    elif opcion == "3":
-        estadisticas_producto()
-
-    elif opcion == "4":
-        guardar_csv()
-
-    elif opcion == "5":
-        print("¡Hasta luego!")
-        break
-
-    else:
-        print("opcion invalida, intente de nuevo")
